@@ -110,56 +110,46 @@
     font-family: 'Caveat', cursive;
   }
   
-  /* Work Experience & Education Items - IMPROVED SPACING */
-  .experience-item, .education-item {
+  /* Work Experience, Education, Project, Certificate Items */
+  .experience-item, .education-item, .project-card, .certificate-card {
     background: #ffe6f0;
     border-radius: 12px;
-    padding: 1.8rem;  /* Increased padding for better inner spacing */
-    margin: 1.5rem auto;  /* Increased margin for better outer spacing */
+    padding: 1rem;
+    margin: 0.5rem auto;
     max-width: 500px;
     box-shadow: 0 4px 6px rgba(255, 182, 193, 0.4);
+    text-align: left;
     transition: transform 0.3s;
   }
   
-  .experience-item:hover, .education-item:hover {
+  .experience-item:hover, .education-item:hover, .project-card:hover, .certificate-card:hover {
     transform: translateY(-5px);
-  }
-  
-  /* Improved spacing and hierarchy for elements */
-  .experience-item h3, .education-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;  /* Increased spacing after title */
-    font-weight: 600;
-    color: #333;
   }
   
   .year {
     font-weight: bold;
     color: #ff69b4;
-    margin-bottom: 1rem;  /* Increased spacing after year */
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-item h3, .education-item h3, .project-card h3, .certificate-card h3 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
   }
   
   .description {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
-    line-height: 1.5;  /* Better line spacing for readability */
+    line-height: 1.4;
+    margin: 0.5rem 0;
   }
   
-  /* Layout for Work Experience and Education */
+  /* Layout untuk Work Experience dan Education */
   #cv {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    gap: 2rem;
     padding: 2rem;
-  }
-  
-  /* Responsive tweaks */
-  @media (max-width: 768px) {
-    #cv {
-      grid-template-columns: 1fr;
-    }
   }
   
   /* Projects */
@@ -170,46 +160,12 @@
     padding: 1rem 0;
   }
   
-  .project-card {
-    background: #ffe6f0;
-    min-width: 200px;
-    border-radius: 12px;
-    padding: 1rem;
-    transition: transform 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .project-card img {
-    width: 100%;
-    border-radius: 12px;
-  }
-  
   /* Certificates */
   .certificates {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-  }
-  
-  .certificate-card {
-    background: #ffe6f0;
-    width: 200px;
-    padding: 1rem;
-    border-radius: 12px;
-    transition: transform 0.3s;
-  }
-  
-  .certificate-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .certificate-card img {
-    width: 100%;
-    border-radius: 8px;
   }
   
   /* Social Media */
@@ -246,7 +202,7 @@
   }
   
   /* Apply Animation */
-  .experience-item, .education-item {
+  .experience-item, .education-item, .project-card, .certificate-card {
     opacity: 0;
     transform: translateY(50px);
     animation: slideInUp 0.8s forwards;
@@ -254,17 +210,23 @@
   
   /* Staggered Animation Delay */
   .experience-item:nth-child(1),
-  .education-item:nth-child(1) {
+  .education-item:nth-child(1),
+  .project-card:nth-child(1),
+  .certificate-card:nth-child(1) {
     animation-delay: 0.2s;
   }
   .experience-item:nth-child(2),
-  .education-item:nth-child(2) {
+  .education-item:nth-child(2),
+  .project-card:nth-child(2),
+  .certificate-card:nth-child(2) {
     animation-delay: 0.4s;
   }
   .experience-item:nth-child(3),
-  .education-item:nth-child(3) {
+  .education-item:nth-child(3),
+  .project-card:nth-child(3),
+  .certificate-card:nth-child(3) {
     animation-delay: 0.6s;
-  }  
+  }
   
   /* Responsive */
   @media (max-width: 768px) {
@@ -282,4 +244,9 @@
       flex-direction: column;
       align-items: center;
     }
+  
+    #cv {
+      grid-template-columns: 1fr;
+    }
   }
+  

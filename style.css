@@ -1,100 +1,15 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Header */
-  .header {
-    background: #ffe6f0;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .photo-intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #ffb6c1;
-  }
-  
-  .introduction {
-    max-width: 500px;
-  }
-  
-  .introduction h1 {
-    font-size: 2rem;
-    color: #ff69b4;
-    font-family: 'Caveat', cursive;
-  }
-  
-  .introduction p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  /* Navigation */
-  .navigation {
-    background: #ffb6c1;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
-    flex-wrap: wrap;
-  }
-  
-  .navigation a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
-  .navigation a:hover {
-    color: #fff0f5;
-  }
-  
-  /* Sections */
-  .section {
+/* SECTION UMUM */
+.section {
     padding: 3rem 2rem;
     text-align: center;
-  }
-  
-  .section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #ff69b4;
-  }
-  
-  /* CV Section */
-  .cv-section {
-    margin-bottom: 4rem;
   }
   
   .section-header {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
     justify-content: center;
     gap: 1rem;
+    margin-bottom: 2rem;
   }
   
   .accent-block {
@@ -104,149 +19,58 @@
     border-radius: 10px;
   }
   
-  .cv-section h2 {
+  .section h2 {
     font-size: 2rem;
+    margin: 0;
     color: #ff69b4;
     font-family: 'Caveat', cursive;
   }
   
-  /* Work Experience, Education, Project, Certificate Items */
-  .experience-item, .education-item, .project-card, .certificate-card {
+  /* CARD WORK EXPERIENCE */
+  .experience-item {
     background: #ffe6f0;
     border-radius: 12px;
-    padding: 1rem;
-    margin: 0.5rem auto;
+    padding: 1.5rem 2rem;
+    margin: 1rem auto;
+    width: 90%;
     max-width: 500px;
     box-shadow: 0 4px 6px rgba(255, 182, 193, 0.4);
     text-align: left;
     transition: transform 0.3s;
   }
   
-  .experience-item:hover, .education-item:hover, .project-card:hover, .certificate-card:hover {
+  /* Judul Pekerjaan */
+  .experience-item h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.3rem; /* Jarak kecil ke tanggal */
+  }
+  
+  /* Tahun / Durasi */
+  .year {
+    font-size: 1rem;
+    color: #ff69b4;
+    margin-bottom: 0.5rem; /* Jarak kecil ke deskripsi */
+  }
+  
+  /* Deskripsi Pekerjaan */
+  .description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+  
+  /* Hover Animasi */
+  .experience-item:hover {
     transform: translateY(-5px);
   }
   
-  .year {
-    font-weight: bold;
-    color: #ff69b4;
-    margin-bottom: 0.5rem;
-  }
-  
-  .experience-item h3, .education-item h3, .project-card h3, .certificate-card h3 {
-    font-size: 1.3rem;
-    margin: 0.5rem 0;
-  }
-  
-  .description {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.4;
-    margin: 0.5rem 0;
-  }
-  
-  /* Layout untuk Work Experience dan Education */
-  #cv {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  /* Projects */
-  .projects {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-  
-  /* Certificates */
-  .certificates {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  /* Social Media */
-  .socials {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .socials a {
-    background: #ffb6c1;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  
-  .socials a:hover {
-    background: #ff69b4;
-  }
-  
-  /* Animations */
-  @keyframes slideInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Apply Animation */
-  .experience-item, .education-item, .project-card, .certificate-card {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideInUp 0.8s forwards;
-  }
-  
-  /* Staggered Animation Delay */
-  .experience-item:nth-child(1),
-  .education-item:nth-child(1),
-  .project-card:nth-child(1),
-  .certificate-card:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .experience-item:nth-child(2),
-  .education-item:nth-child(2),
-  .project-card:nth-child(2),
-  .certificate-card:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .experience-item:nth-child(3),
-  .education-item:nth-child(3),
-  .project-card:nth-child(3),
-  .certificate-card:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  /* Responsive */
+  /* Responsive Mobile */
   @media (max-width: 768px) {
-    .photo-intro {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .cv-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .projects {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #cv {
-      grid-template-columns: 1fr;
+    .experience-item {
+      padding: 1.5rem;
     }
   }
   

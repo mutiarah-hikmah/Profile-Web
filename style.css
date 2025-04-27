@@ -284,4 +284,37 @@
       align-items: center;
     }
   }
+
+  /* Work Experience & Education Items - Improved Spacing */
+.experience-item h3, .education-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;  /* Increased from 0.5rem for better spacing after h3 */
+    color: #333;  /* Better contrast */
+  }
+  
+  .year {
+    font-weight: bold;
+    color: #ff69b4;
+    margin-bottom: 1rem;  /* Increased from 0.5rem for better spacing after year */
+    font-size: 0.9rem;  /* Slightly smaller for hierarchy */
+    letter-spacing: 0.5px;  /* Improved readability */
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;  /* Improved line spacing in paragraphs */
+    margin-top: 0.5rem;  /* Added top margin */
+  }
+  
+  /* Additional improvements for better visual hierarchy */
+  .role-title {  /* If you want to add this class to your h3 elements */
+    font-weight: 600;
+  }
+  
+  /* Container padding adjustments for better content spacing */
+  .experience-item, .education-item {
+    padding: 1.8rem;  /* Increased from 1.5rem for better inner spacing */
+    margin: 1.5rem auto;  /* Increased from 1rem for better outer spacing */
+  }
   

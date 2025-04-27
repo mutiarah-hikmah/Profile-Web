@@ -4,11 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Profile</title>
+  
+  <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <header class="header">
+  <header class="header" data-aos="fade-down">
     <div class="photo-intro">
       <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-photo">
       <div class="introduction">
@@ -18,14 +27,14 @@
     </div>
   </header>
 
-  <nav class="navigation">
+  <nav class="navigation" data-aos="fade-up">
     <a href="#cv">CV</a>
     <a href="#project">Project</a>
     <a href="#certificate">Certificate</a>
     <a href="#social">Social Media</a>
   </nav>
 
-  <section id="cv" class="section">
+  <section id="cv" class="section" data-aos="fade-right">
     <h2>Curriculum Vitae</h2>
     <div class="cv-content">
       <div>
@@ -39,10 +48,9 @@
     </div>
   </section>
 
-  <section id="project" class="section">
+  <section id="project" class="section" data-aos="fade-left">
     <h2>Projects</h2>
     <div class="projects">
-      <!-- Repeat for each project -->
       <div class="project-card">
         <img src="assets/images/project1.jpg" alt="Project 1">
         <p>Project 1 Description</p>
@@ -54,7 +62,7 @@
     </div>
   </section>
 
-  <section id="certificate" class="section">
+  <section id="certificate" class="section" data-aos="zoom-in">
     <h2>Certificates</h2>
     <div class="certificates">
       <div class="certificate-card">
@@ -68,7 +76,7 @@
     </div>
   </section>
 
-  <section id="social" class="section">
+  <section id="social" class="section" data-aos="fade-up">
     <h2>Social Media</h2>
     <div class="socials">
       <a href="#">Instagram</a>
@@ -76,6 +84,12 @@
       <a href="#">GitHub</a>
     </div>
   </section>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>

@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
   }
   
   .profile-photo {
@@ -42,6 +43,7 @@
   .introduction h1 {
     font-size: 2rem;
     color: #ff69b4;
+    font-family: 'Caveat', cursive;
   }
   
   .introduction p {
@@ -56,6 +58,7 @@
     justify-content: center;
     gap: 2rem;
     padding: 1rem 0;
+    flex-wrap: wrap;
   }
   
   .navigation a {
@@ -86,6 +89,7 @@
     display: flex;
     justify-content: center;
     gap: 5rem;
+    flex-wrap: wrap;
   }
   
   .cv-content div {
@@ -108,6 +112,11 @@
     min-width: 200px;
     border-radius: 12px;
     padding: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
   }
   
   .project-card img {
@@ -128,6 +137,11 @@
     width: 200px;
     padding: 1rem;
     border-radius: 12px;
+    transition: transform 0.3s;
+  }
+  
+  .certificate-card:hover {
+    transform: scale(1.05);
   }
   
   .certificate-card img {
@@ -140,6 +154,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
   }
   
   .socials a {
@@ -153,5 +168,23 @@
   
   .socials a:hover {
     background: #ff69b4;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .photo-intro {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cv-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   

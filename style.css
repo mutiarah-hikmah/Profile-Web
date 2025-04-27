@@ -15,40 +15,52 @@
   }
   
   /* Header section */
-  header {
+  .header {
     text-align: center;
     margin-bottom: 40px;
   }
   
-  header img {
+  .photo-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-photo {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #ff99c8;
-    margin-bottom: 20px;
+    border: 4px solid #ff99c8;
+    margin-bottom: 15px;
   }
   
-  header h1 {
-    font-size: 36px;
+  .introduction h1 {
+    font-size: 32px;
     color: #ff66a3;
   }
   
-  header p {
+  .introduction p {
     font-size: 18px;
     margin-top: 10px;
   }
   
   /* Navigation links */
-  nav a {
-    color: #ff66a3;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    position: relative;
+  .navigation {
+    text-align: center;
+    margin-bottom: 40px;
   }
   
-  nav a::after {
+  .navigation a {
+    color: #ff66a3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    font-size: 18px;
+  }
+  
+  .navigation a::after {
     content: '';
     display: block;
     width: 0;
@@ -60,74 +72,76 @@
     left: 0;
   }
   
-  nav a:hover::after {
+  .navigation a:hover::after {
     width: 100%;
   }
   
-  /* Section titles */
-  h2 {
+  /* Sections */
+  .section {
+    background: #fff0f5;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+    margin-bottom: 40px;
+  }
+  
+  .section h2 {
     font-size: 28px;
     color: #ff66a3;
     margin-bottom: 20px;
-    position: relative;
+    text-align: center;
   }
   
-  .section-header {
+  /* Projects and Certificates */
+  .projects, .certificates {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
   
-  .accent-block {
-    width: 40px;
-    height: 5px;
-    background-color: #ff99c8;
-    margin-right: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Work Experience and Education Sections */
-  .cv-section {
-    background: #fff0f5;
-    padding: 30px;
+  .project-card, .certificate-card {
+    background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
-    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.2);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
   }
   
-  .experience-item, .education-item {
-    margin-bottom: 20px;
+  .project-card img, .certificate-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
   
-  .experience-item h3, .education-item h3 {
-    font-size: 22px;
-    color: #d63384;
+  /* Social media */
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
   
-  .year {
+  .socials a {
+    background: #ff66a3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: bold;
-    color: #ff66a3;
-    margin-bottom: 5px;
+    transition: background 0.3s;
   }
   
-  .description {
-    font-size: 16px;
-    color: #555;
+  .socials a:hover {
+    background: #ff3385;
   }
   
-  /* Animation when scrolling */
-  .cv-section, header, nav {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+  /* Responsive iframe (cv section) */
+  iframe {
+    border-radius: 10px;
   }
   
-  .cv-section.show, header.show, nav.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Smooth scroll */
+  /* Smooth Scroll */
   html {
     scroll-behavior: smooth;
   }

@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    background: #ffe6f0;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .photo-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffb6c1;
+  }
+  
+  .introduction {
+    max-width: 500px;
+  }
+  
+  .introduction h1 {
+    font-size: 2rem;
+    color: #ff69b4;
+  }
+  
+  .introduction p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Navigation */
+  .navigation {
+    background: #ffb6c1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .navigation a:hover {
+    color: #fff0f5;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ff69b4;
+  }
+  
+  /* CV Content */
+  .cv-content {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  
+  .cv-content div {
+    background: #ffe6f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 250px;
+  }
+  
+  /* Projects */
+  .projects {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .project-card {
+    background: #ffe6f0;
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .project-card img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Certificates */
+  .certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .certificate-card {
+    background: #ffe6f0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .certificate-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Social Media */
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .socials a {
+    background: #ffb6c1;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .socials a:hover {
+    background: #ff69b4;
+  }
+  

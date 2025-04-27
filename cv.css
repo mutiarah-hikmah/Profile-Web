@@ -1,70 +1,59 @@
-/* cv.css */
-
-/* Global setup */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fdfdfd;
+    background-color: #fff;
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
   }
   
-  /* Section styling */
   .section {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
   }
   
-  /* Header for each section like Work Experience, Skills, etc */
   .section-header {
     display: flex;
     align-items: center;
-    margin-top: 40px;
     margin-bottom: 20px;
   }
   
   .accent-block {
     width: 6px;
     height: 30px;
-    background-color: #ffb6c1; /* soft pink accent */
-    margin-right: 10px;
+    background-color: #ff7eb9; /* Pink pastel */
+    margin-right: 15px;
     border-radius: 3px;
   }
   
   .section-header h2 {
     font-size: 28px;
-    font-weight: 700;
-    margin: 0;
+    color: #ff7eb9;
   }
   
-  /* Experience, Skill, Education, Awards item styling */
-  .experience-item,
-  .Skill-item {
-    background-color: #fff;
+  .experience-item, .Skill-item {
+    background: #fff;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
   
   .role-title {
     font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #444;
+    color: #333;
+    margin-bottom: 5px;
   }
   
   .place {
     font-size: 16px;
-    font-weight: 500;
     color: #777;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   
   .year {
     font-size: 14px;
-    font-weight: 400;
     color: #999;
     margin-bottom: 10px;
   }
@@ -73,20 +62,21 @@ body {
     font-size: 15px;
     line-height: 1.6;
     color: #555;
+    margin-bottom: 5px;
   }
   
-  /* Responsive tweak */
-  @media (max-width: 768px) {
+  /* Optional responsive tweak */
+  @media (max-width: 600px) {
     .section {
-      padding: 20px 15px;
-    }
-  
-    .role-title {
-      font-size: 18px;
+      padding: 20px 10px;
     }
   
     .section-header h2 {
       font-size: 24px;
+    }
+  
+    .role-title {
+      font-size: 18px;
     }
   }
   
